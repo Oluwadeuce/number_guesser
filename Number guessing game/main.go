@@ -7,21 +7,8 @@ import (
 	"time"
 )
 
-// func handler(w http.ResponseWriter, r *http.Request) {
-// 	fmt.Fprintf(w, "Server is running! Guess a number between 1 and 10. \n") // This message is to check if the server is working
-// }
-
-// type Response struct {
-// 	Message string `json:"message"`
-// }
-
 func main() {
 
-	// http.HandleFunc("/", handler)     //This is the main route
-	// http.ListenAndServe(":8080", nil) //This means to start the server on port 8080
-	// if err != nil {  // This error line was done in case there was error in the running of the server
-	// 	fmt.Println("Error starting server:", err)
-	// }
 
 	rand.Seed(time.Now().UnixNano()) // This means (seed the random generator) Idk what it means yet, but I'm guessing it is a goroutine or something similar
 	correctAns := rand.Intn(10) + 1  // This generates a random number between 1 and 10
@@ -48,3 +35,4 @@ func main() {
 		}
 	}
 }
+
