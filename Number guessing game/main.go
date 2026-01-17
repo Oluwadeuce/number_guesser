@@ -11,10 +11,10 @@ func main() {
 
 
 	rand.Seed(time.Now().UnixNano()) // This means (seed the random generator) Idk what it means yet, but I'm guessing it is a goroutine or something similar
-	correctAns := rand.Intn(10) + 1  // This generates a random number between 1 and 10
+	correctAns := rand.Intn(1000) + 1  // This generates a random number between 1 and 1000
 	fmt.Println("Number Guesser!")
 	for {
-		fmt.Println("Guess a number between 1 and 10:")
+		fmt.Println("Guess a number between 1 and 1000:")
 
 		var guess int
 
@@ -35,4 +35,5 @@ func main() {
 		}
 	}
 }
+
 
